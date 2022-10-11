@@ -177,6 +177,7 @@ class Bukusiswa {
 		$this->loader->add_filter( 'woocommerce_account_menu_items', $plugin_public , 'buku_woocommerce_account_menu_items', 999 );
 		$this->loader->add_action( 'woocommerce_account_watchlist_endpoint', $plugin_public , 'buku_woocommerce_account_watchlist_endpoint' );
 		$this->loader->add_action( 'woocommerce_account_myproduct_endpoint', $plugin_public , 'buku_woocommerce_account_myproduct_endpoint' );
+		$this->loader->add_action( 'woocommerce_account_myinbox_endpoint', $plugin_public , 'buku_woocommerce_account_myinbox_endpoint' );
 		$this->loader->add_action( 'woocommerce_account_dashboard', $plugin_public , 'buku_woocommerce_account_dashboard');
 		$this->loader->add_action( 'woocommerce_edit_account_form', $plugin_public , 'buku_woocommerce_edit_account_form');
 		$this->loader->add_action( 'woocommerce_save_account_details', $plugin_public, 'buku_woocommerce_save_account_details', 10, 1 );

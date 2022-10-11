@@ -108,6 +108,7 @@ class Bukusiswa_Public {
 		unset($items['edit-address']);
 		$items = array_slice( $items, 0, 1, true ) 
 		+ array( 'myproduct' => 'My Products' )
+		+ array( 'myinbox' => 'Inbox' )
 		+ array( 'watchlist' => 'Watchlist' )
 		+ array_slice( $items, 1, NULL, true );
 
@@ -118,6 +119,7 @@ class Bukusiswa_Public {
 
 		add_rewrite_endpoint( 'watchlist', EP_PAGES );
 		add_rewrite_endpoint( 'myproduct', EP_PAGES );
+		add_rewrite_endpoint( 'myinbox', EP_PAGES );
 
 	}
 
@@ -125,6 +127,13 @@ class Bukusiswa_Public {
 
 			// of course you can print dynamic content here, one of the most useful functions here is get_current_user_id()
 			echo do_shortcode( "[yith_wcwl_wishlist]");
+
+		}
+
+		public function buku_woocommerce_account_myinbox_endpoint() {
+
+			// of course you can print dynamic content here, one of the most useful functions here is get_current_user_id()
+			include_once dirname( __FILE__ ) . '/partials/myinbox.php';
 
 		}
 
